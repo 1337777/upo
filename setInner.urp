@@ -1,0 +1,23 @@
+ffi setInner
+script /setInner133.js
+file /setInner133.js setInner.js
+jsFunc SetInner.setIt=setIt
+jsFunc SetInner.getIt=getIt
+jsFunc SetInner.getValue=getValue
+jsFunc SetInner.getUrlPrefix=getUrlPrefix
+jsFunc SetInner.setUrlPrefix=setUrlPrefix
+jsFunc SetInner.windowOpen=windowOpen
+jsFunc SetInner.rand=rand
+jsFunc SetInner.transformxml=transformxml
+benignEffectful SetInner.setIt
+benignEffectful SetInner.setUrlPrefix
+benignEffectful SetInner.windowOpen
+benignEffectful SetInner.transformxml
+clientOnly SetInner.setIt
+clientOnly SetInner.getIt
+clientOnly SetInner.getValue
+clientOnly SetInner.getUrlPrefix
+clientOnly SetInner.setUrlPrefix
+clientOnly SetInner.windowOpen
+clientOnly SetInner.rand
+clientOnly SetInner.transformxml

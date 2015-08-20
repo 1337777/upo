@@ -1,0 +1,5 @@
+ffi geolocation
+script /geolocation10.js
+file /geolocation10.js geolocation.js
+jsFunc Geolocation.geolocation=geolocation
+jsFunc Geolocation.initGeolocation=initGeolocation

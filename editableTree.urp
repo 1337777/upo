@@ -1,0 +1,38 @@
+library .
+library meta
+library setInner
+library geolocation
+library geolocationBox
+library timeurnStringBox
+library ecdsa
+library chat
+database dbname=editableTree.db
+sql editableTree.sql
+allow env REMOTE_ADDR
+allow url http://*     # logic internal
+allow url https://*
+allow url http://mega.nz/*
+allow url https://mega.nz/*
+allow url http://google.com/*
+allow url https://google.com/*
+allow url http://1337777.org/*
+allow url https://1337777.org/*
+allow url http://localhost:8081/*
+allow url https://localhost:8081/*
+allow url http://localhost:8081/*
+allow url https://localhost:8081/*
+file /style.css examples/style.css
+rewrite url EditableTree/*
+safeGet EditableTree/o1
+safeGet o1
+safeGet edit
+safeGet redir
+safeGet listing
+safeGet main
+
+$/datetime
+sql2
+listEdit
+optionBox
+authBox
+editableTree

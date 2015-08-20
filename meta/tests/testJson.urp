@@ -1,0 +1,5 @@
+library ..
+rewrite all TestJson/*
+
+$/list
+testJson

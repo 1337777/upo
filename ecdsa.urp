@@ -1,0 +1,35 @@
+ffi ecdsa
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/core.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/cipher-core.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/md5.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/tripledes.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/sha1.js
+script http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/sha256.js
+script http://yui.yahooapis.com/2.9.0/build/yahoo/yahoo-min.js
+script http://kjur.github.io/jsrsasign/ext/jsbn.js
+script http://kjur.github.io/jsrsasign/ext/jsbn2.js
+script http://kjur.github.io/jsrsasign/ext/prng4.js
+script http://kjur.github.io/jsrsasign/ext/rng.js
+script http://kjur.github.io/jsrsasign/ext/rsa.js
+script http://kjur.github.io/jsrsasign/ext/rsa2.js
+script http://kjur.github.io/jsrsasign/ext/base64.js
+script http://kjur.github.io/jsrsasign/asn1hex-1.1.js
+script http://kjur.github.io/jsrsasign/rsapem-1.1.js
+script http://kjur.github.io/jsrsasign/rsasign-1.2.js
+script http://kjur.github.io/jsrsasign/x509-1.1.js
+script http://kjur.github.io/jsrsasign/pkcs5pkey-1.0.js
+script http://kjur.github.io/jsrsasign/asn1-1.0.js
+script http://kjur.github.io/jsrsasign/asn1x509-1.0.js
+script http://kjur.github.io/jsrsasign/crypto-1.1.js
+script http://kjur.github.io/jsrsasign/ext/ec.js
+script http://kjur.github.io/jsrsasign/ext/ec-patch.js
+script http://kjur.github.io/jsrsasign/ecdsa-modified-1.0.js
+script http://kjur.github.io/jsrsasign/ecparam-1.0.js
+script /ecdsa1233.js    # /!\ cache /!\ tmp rev
+file /ecdsa1233.js ecdsa.js
+jsFunc Ecdsa.generateSecret=generateSecret
+jsFunc Ecdsa.author=author
+jsFunc Ecdsa.samePublicIdAuthor=samePublicIdAuthor
+jsFunc Ecdsa.toLocalStorage=toLocalStorage
+jsFunc Ecdsa.fromLocalStorage=fromLocalStorage

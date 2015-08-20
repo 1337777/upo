@@ -1,0 +1,22 @@
+library setInner
+database dbname=chat.db
+sql chat.sql
+allow url http://*
+allow url https://*
+allow requestHeader Host
+safeGet Chat/data
+safeGet data
+safeGet Chat/edit
+safeGet edit
+safeGet Chat/redir
+safeGet Chat/listing
+safeGet Chat/main
+file / redir_main.html
+rewrite url Chat/*
+
+$/monad
+$/list
+$/datetime
+broadcast
+buffer
+chat
