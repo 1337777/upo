@@ -83,8 +83,8 @@ functor Make (M : sig
 		
 	in
 	    ( <xml><dyn signal={ edit <- signal widget.Edit; return (@Widget.asWidget widget_subValue_subWidget edit) } />
-	      <button value="Add" onclick={ fn _ => add (); clearEdit () } />
-		<button value="Reset" onclick={ fn _ => reset () } /><br/><br/>
+	      <button value="➕"(*"Add"*) onclick={ fn _ => add (); clearEdit () } />
+		<button value="✖"(*"Reset"*) onclick={ fn _ => reset () } /><br/><br/>
 		  <dyn signal={ asWidgetS widget.Head }/></xml> )
 	end
 	

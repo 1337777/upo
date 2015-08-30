@@ -23,7 +23,7 @@ fun filterPrefixes s =
 		None => r.Haystack
 	      | Some (prefix, suffix) => filterPrefix {Haystack = suffix, Needle = r.Needle}
     in
-	filterPrefix {Haystack = filterPrefix {Haystack = String.substring s {Start = 0, Len = 1024}, Needle = "http://"}, Needle = "data:"}
+	filterPrefix {Haystack = filterPrefix {Haystack = String.substring s {Start = 0, Len = 1024}, Needle = "http://"}, Needle = "https://"}
     end
 		  
 val timeurnBox = @@Widget.make [time * string] [source string * source string]
@@ -37,7 +37,7 @@ val timeurnBox = @@Widget.make [time * string] [source string * source string]
 				return (Option.get minTime (read t),
 					filterPrefixes (filterSpace s)),
 		     AsValue = fn (t, s) => if t = minTime
-					    then <xml><b>INVALID</b></xml>
+					    then <xml><b>(*INVALID*)⚡</b></xml>
 					    else <xml>{txt t} (*blink-alternate urls here*)
 					      <active code={ urlPrefix <- SetInner.getUrlPrefix();
 					        case Basis.checkUrl (urlPrefix ^ s) of
@@ -83,7 +83,7 @@ val timeurnStringBox = @@Widget.make [string] [timeurnStringBox]
 										       alarmLoop ls (runTime + 1)
 						   else return ()
 					   in
-					       return (<xml>Run <ccheckbox source={alarmSwitch}/>
+					       return (<xml>(*Run*)⏩🐌🐌  <ccheckbox source={alarmSwitch}/>
 						             <dyn signal={ alarmSwitchVal <- (signal alarmSwitch);
 									   forceNowVal <- (signal forceNow);
 									   return (<xml><active code={	   
@@ -104,7 +104,7 @@ val timeurnStringBox = @@Widget.make [string] [timeurnStringBox]
 										       if alarmSwitchVal then
 											   spawn (alarmLoop ls 0);
 											   return (<xml/>) (* *)
-										       else return (<xml>, Force from now <ccheckbox source={forceNow}/></xml>) (*  *)
+										       else return (<xml>, (*Force from now*) ⏩⏩⏩ <ccheckbox source={forceNow}/></xml>) (*  *)
 										   end}/></xml>) }/></xml>)
 					   end}/></xml>) }
 

@@ -1,0 +1,9 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+  <xsl:template match="/">
+    <html>
+      <h1>ITP 2015 Reporter</h1>
+      <p>Init 0</p>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>

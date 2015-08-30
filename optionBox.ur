@@ -40,7 +40,7 @@ val optionBox = fn [subValue] [subWidget] (widget_subWidget : Widget.t subValue 
 					  subValue <- @Widget.value widget_subWidget widgetSubWidget;
 					  return (Some subValue),
 		       AsValue = fn subValueO => case subValueO of
-						     None => (<xml>[NONE]</xml>)
+						     None => (<xml>(*[NONE]*)◻</xml>)
 						   | Some subValue => (@Widget.asValue widget_subWidget subValue) }
 
 		     

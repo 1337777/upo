@@ -6,7 +6,7 @@ val authBox = @@Widget.make [option string] [authBoxWidget]
 		  AsWidget = fn r => ( <xml><dyn signal={ rModeSwitch <- signal r.ModeSwitch;
 							  return ( <xml>{ case rModeSwitch of
 									      False => ( <xml><ctextbox source={r.Auth}/></xml> )
-									    | True => ( <xml><ctextbox source={r.Secret}/> <button onclick={ fn _ => idOS <- get r.Paste; case idOS of None => return () | Some idS => s <- get idS; set r.Secret s }>Paste</button>,</xml> ) } SecretMode: <ccheckbox source={r.ModeSwitch}/></xml> ) } /></xml> ),
+									    | True => ( <xml><ctextbox source={r.Secret}/> <button onclick={ fn _ => idOS <- get r.Paste; case idOS of None => return () | Some idS => s <- get idS; set r.Secret s }>(*Paste*)📋</button>,</xml> ) } (*SecretMode*) 🔑🔐🔏 : <ccheckbox source={r.ModeSwitch}/></xml> ) } /></xml> ),
 		  Value = fn r => timeurnSO <- signal r.Timeurn;
 			     case timeurnSO of
 				 None => return None (* error ( <xml> pointer to some Timeurn required </xml> ) *)
@@ -37,7 +37,7 @@ val authBox = @@Widget.make [option string] [authBoxWidget]
 						(case Ecdsa.samePublicIdAuthor finalPublicId timeurn author of
 						     False => return None
 						   | True => return (Some author) )))),
-		  AsValue = fn sO => case sO of None => <xml><p>KO</p></xml>
-					      | Some s => <xml><p title={s}>OK</p></xml> }
+		  AsValue = fn sO => case sO of None => <xml><p>⚡(*KO*)</p></xml>
+					      | Some s => <xml><p title={s}>✔(*OK*)</p></xml> }
 
 	      

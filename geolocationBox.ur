@@ -26,7 +26,7 @@ val geolocationBox = @@Widget.make [option Geolocation.geolocation] [geolocation
 			 Value = signal,
 			 AsValue = fn gl => case gl of
 						None => ( <xml></xml> )
-					      | Some gl => ( <xml>{[gl.GeoLat]} , {[gl.GeoLon]}</xml> ) }
+					      | Some gl => ( <xml>↕ {[gl.GeoLat]} , ↔ {[gl.GeoLon]}</xml> ) }
 
 		     
 val geolocationBoxDb = @@Widget.make [serialized(option Geolocation.geolocation)] [geolocationBox]

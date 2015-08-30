@@ -1,6 +1,6 @@
 ffi setInner
-script /setInner133.js
-file /setInner133.js setInner.js
+script /setInner13323.js
+file /setInner13323.js setInner.js
 jsFunc SetInner.setIt=setIt
 jsFunc SetInner.getIt=getIt
 jsFunc SetInner.getValue=getValue

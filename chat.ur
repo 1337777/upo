@@ -103,7 +103,7 @@ fun edit (titl : string) =
 			     return (List.mapX (fn x => <xml><li>{[show x.3]} @ {[case x.2 of None => "" | Some x2 => x2]}</li></xml>) ( List.take 100 (List.rev ls) ) )
 			    }/></div></div>
 		
-	      <div class={xsltOutput} style="float: right"></div>
+	      <div class={xsltOutput} style="float: left"></div>
         </body></xml> )
     end
 

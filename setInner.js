@@ -45,7 +45,15 @@ function setUrlPrefix(s) {
 }
 
 function windowOpen(loc) {
-    window.open(loc);
+    try {
+	window.open(loc);
+	Notification.requestPermission();
+	var notification = new Notification("⏳", { body: loc });
+	return {};
+    }
+    catch (err1) {
+	return {};
+    }
 }
 
 function rand() {
@@ -80,7 +88,7 @@ function transformxml(xslttxt, len)
 	    "text/xml");
 	xsltPrs.importStylesheet(xsl);
 	xml = xsltPrs.transformToFragment(xml, document);
-	// if (xml.firstChild.nodeName == "PARSERERROR") { return false; }
+	if (xml.firstChild.nodeName == "PARSERERROR") { return false; }
 
 	// if (mydiv.firstChild != null) { mydiv.removeChild(mydiv.firstChild); }
 	mydiv.innerHTML = "";
