@@ -1,3 +1,4 @@
+(* anagrams *)
 
 (* tail recursive but could be better using array instead of list *)
 let rec removeOne x ls2 acc =
@@ -27,6 +28,7 @@ ana ['b'; 'a'; 'd'] ['d'; 'a'; 'a'];;
 ana ['a'; '1'; 'b'; '2'; 'c'; '3'] ['a'; 'b'; 'c'; '1'; '2'; '3'];;
 
 
+(* stack it *)
 
 let rec gcd a b =
   if b = 0 then a else gcd b (a mod b);;
@@ -41,3 +43,9 @@ let rec gcdList ls =
 
 gcdList [84; 90; 120];;
 
+
+(* the database tables are *)
+type slot = {id : int; size : int}
+type valet = {id : int; name : string}
+type track = {index : int; who : valet; where: slot option; carCustomer : string }
+  
